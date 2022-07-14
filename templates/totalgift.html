@@ -1,0 +1,24 @@
+{% extends "dashboard.html" %}
+{% block title %}
+<h2>Section title</h2>
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Header</th>
+                <th scope="col">Header</th>
+                <!-- <th scope="col">Header</th>
+                <th scope="col">Header</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{ i.id }}</td>
+                <td>{{ i.gift }}</td>
+                <td>{{ i.gift_qantity}}</td>
+                <!-- <td>{{ i.customer_call_time }}</td>
+                <td>text</td> -->
+                {% endfor %}
+{% endblock %}
